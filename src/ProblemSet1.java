@@ -42,7 +42,7 @@ public class ProblemSet1 {
          double widthCentimeters = width * centimeterConversion;
          double squareCentimeters = lengthCentimeters * centimeterConversion;
          double centimetersRounded = Math.round(squareCentimeters * 100.0) / 100.0;
-         System.out.println("\n" + centimetersRounded + " centimeters");
+         System.out.println("\n" + centimetersRounded + " centimeters.");
 
         /*
          * Exercise 3.
@@ -51,27 +51,42 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-         System.out.println("\n");
+         double lengthSquared = length * length;
+         double widthSquared = width * width;
+         double diagonalSquared = lengthSquared + widthSquared;
+         double diagonal = Math.round(java.lang.Math.sqrt(diagonalSquared) * 100.0) / 100.0;
+         System.out.println("\n" + diagonal + " inches.");
 
-        // /*
-        //  * Exercise 4.
-        //  *
-        //  * Given the grading policy and the homework, quiz, and test grades I received,
-        //  * what marking period grade will I get?
-        //  */
-        //
-        // int homework1 = 88;
-        // int homework2 = 91;
-        // int homework3 = 0;
-        // int quiz1 = 84;
-        // int quiz2 = 89;
-        // int quiz3 = 93;
-        // int test1 = 74;
-        // int test2 = 87;
-        // int test3 = 82;
-        //
-        //
-        //
+        /*
+         * Exercise 4.
+         *
+         * Given the grading policy and the homework, quiz, and test grades I received,
+         * what marking period grade will I get?
+         */
+
+        int homework1 = 88;
+        int homework2 = 91;
+        int homework3 = 0;
+        int quiz1 = 84;
+        int quiz2 = 89;
+        int quiz3 = 93;
+        int test1 = 74;
+        int test2 = 87;
+        int test3 = 82;
+
+        int homeworkWeight = 15;
+        int quizWeight = 35;
+        int testWeight = 50;
+        double homeworkGrade = (homework1 + homework2 + homework3) / 3;
+        double quizGrade = (quiz1 + quiz2 + quiz3) / 3;
+        double testGrade = (test1 + test2 + test3) / 3;
+        double homeworkPercentage = (homeworkGrade / 100) * homeworkWeight;
+        double quizPercentage = (quizGrade / 100) * quizWeight;
+        double testPercentage = (testGrade / 100) * testWeight;
+
+        System.out.println("\n" + );
+
+
         // /*
         //  * Exercise 5.
         //  *
