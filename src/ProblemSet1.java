@@ -29,25 +29,30 @@ public class ProblemSet1 {
          double widthMillimeters = width * conversion;
          double squareMillimeters = lengthMillimeters * widthMillimeters;
          double squareRounded = Math.round(squareMillimeters * 100.0) / 100.0;
-         System.out.println(squareRounded + " square millimeters.");
+         System.out.println("\n" + squareRounded + " square millimeters.");
 
-        // /*
-        //  * Exercise 2.
-        //  *
-        //  * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
-        //  */
-        //
-        //
-        //
-        // /*
-        //  * Exercise 3.
-        //  *
-        //  * What is the length of the diagonal (in inches) between two corners on an 8.5-
-        //  * by-11-inch sheet of paper?
-        //  */
-        //
-        //
-        //
+        /*
+         * Exercise 2.
+         *
+         * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
+         */
+
+         double centimeterConversion = 2.54;
+         double lengthCentimeters = length * centimeterConversion;
+         double widthCentimeters = width * centimeterConversion;
+         double squareCentimeters = lengthCentimeters * centimeterConversion;
+         double centimetersRounded = Math.round(squareCentimeters * 100.0) / 100.0;
+         System.out.println("\n" + centimetersRounded + " centimeters");
+
+        /*
+         * Exercise 3.
+         *
+         * What is the length of the diagonal (in inches) between two corners on an 8.5-
+         * by-11-inch sheet of paper?
+         */
+
+         System.out.println("\n");
+
         // /*
         //  * Exercise 4.
         //  *
