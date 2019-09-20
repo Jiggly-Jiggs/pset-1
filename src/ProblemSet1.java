@@ -120,31 +120,46 @@ public class ProblemSet1 {
 
         System.out.printf("\n\n$%,.2f.", finalPay);
 
-        // /*
-        //  * Exercise 7.
-        //  *
-        //  * I am planning a class trip next month. How many buses do I need, and how many
-        //  * people will be on the last bus?
-        //  */
-        //
-        //
-        //
-        // /*
-        //  * Exercise 8.
-        //  *
-        //  * What is the surface area of a standard Cornhole board?
-        //  */
-        //
-        //
-        //
-        // /*
-        //  * Exercise 9.
-        //  *
-        //  * Are the years 2020, 2100, and 2400 leap years?
-        //  */
-        //
-        //
-        //
+        /*
+         * Exercise 7.
+         *
+         * I am planning a class trip next month. How many buses do I need, and how many
+         * people will be on the last bus?
+         */
+
+         final double STUDENTS = 273;
+         final double TEACHERS = 28;
+         final double CAPACITY = 54;
+
+         double numOfBuses = (STUDENTS / CAPACITY) + 1;
+         double remaining = (STUDENTS % CAPACITY) + TEACHERS;
+         System.out.printf("\n\n%.0f buses are needed, ", numOfBuses);
+         System.out.printf("with %.0f passangers on the last bus.", remaining);
+
+        /*
+         * Exercise 8.
+         *
+         * What is the surface area of a standard Cornhole board?
+         */
+
+        final double BOARD_LENGTH = 48;
+        final double BOARD_WIDTH = 24;
+        final double BOARD_DIAMETER = 6;
+
+        double holeArea = Math.PI * ((BOARD_DIAMETER / 2) * (BOARD_DIAMETER / 2));
+        double surfaceArea = (BOARD_LENGTH * BOARD_WIDTH) - holeArea;
+        System.out.printf("\n\n%,.2f square inches.", surfaceArea);
+
+        /*
+         * Exercise 9.
+         *
+         * Are the years 2020, 2100, and 2400 leap years?
+         */
+
+        int year = 2020;
+        boolean isLeapYear = ((year / 4) == 0) && (((year / 100) != 0) || (year / 400) ==0);
+        System.out.println(isLeapYear);
+
         // /*
         //  * Exercise 10.
         //  *
