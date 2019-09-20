@@ -22,11 +22,11 @@ public class ProblemSet1 {
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-         double length = 8.5;
-         double width = 11;
-         double conversion = 25.4;
-         double lengthMillimeters = length * conversion;
-         double widthMillimeters = width * conversion;
+         final double LENGTH = 8.5;
+         final double WIDTH = 11;
+         final double CONVERSION_IN_MM = 25.4;
+         double lengthMillimeters = LENGTH * CONVERSION_IN_MM;
+         double widthMillimeters = WIDTH * CONVERSION_IN_MM;
          double squareMillimeters = lengthMillimeters * widthMillimeters;
          System.out.printf("\n%,.2f square millimeters.", squareMillimeters);
 
@@ -36,9 +36,9 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-         double centimeterConversion = 2.54;
-         double lengthCentimeters = length * centimeterConversion;
-         double widthCentimeters = width * centimeterConversion;
+         final double CONVERSION_IN_CM = 2.54;
+         double lengthCentimeters = LENGTH * CONVERSION_IN_CM;
+         double widthCentimeters = WIDTH * CONVERSION_IN_CM;
          double perimeterCentimeters = (widthCentimeters * 2) + (lengthCentimeters * 2);
          System.out.printf("\n\n%.2f centimeters.", perimeterCentimeters);
 
@@ -49,8 +49,8 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-         double lengthSquared = length * length;
-         double widthSquared = width * width;
+         double lengthSquared = LENGTH * LENGTH;
+         double widthSquared = WIDTH * WIDTH;
          double diagonalSquared = lengthSquared + widthSquared;
          double diagonal = Math.round(java.lang.Math.sqrt(diagonalSquared) * 100.0) / 100.0;
          System.out.printf("\n\n%.2f inches", diagonal);
@@ -72,34 +72,54 @@ public class ProblemSet1 {
         int test2 = 87;
         int test3 = 82;
 
-        double homeworkWeight = .15;
-        double quizWeight = .35;
-        double testWeight = .50;
-        double homeworkGrade = (homework1 + homework2 + homework3) * homeworkWeight / 3;
-        double quizGrade = (quiz1 + quiz2 + quiz3) * quizWeight / 3;
-        double testGrade = (test1 + test2 + test3) * testWeight / 3;
+        final double WEIGHT_HOMEWORK = .15;
+        final double WEIGHT_QUIZ = .35;
+        final double WEIGHT_TEST = .50;
+        double homeworkGrade = (homework1 + homework2 + homework3) * WEIGHT_HOMEWORK / 3;
+        double quizGrade = (quiz1 + quiz2 + quiz3) * WEIGHT_QUIZ / 3;
+        double testGrade = (test1 + test2 + test3) * WEIGHT_TEST / 3;
         double total = (homeworkGrade + quizGrade + testGrade);
 
         System.out.printf("\n\n%.2f%%", total);
 
 
-        // /*
-        //  * Exercise 5.
-        //  *
-        //  * I make $12.50/hour working as a cashier at a local supermarket. How much money
-        //  * will I make this week?
-        //  */
-        //
-        //
-        //
-        // /*
-        //  * Exercise 6.
-        //  *
-        //  * What is my take-home pay each check?
-        //  */
-        //
-        //
-        //
+        /*
+         * Exercise 5.
+         *
+         * I make $12.50/hour working as a cashier at a local supermarket. How much money
+         * will I make this week?
+         */
+
+        final double WAGE_HOURLY = 12.50;
+
+        double hoursMon = 7.5;
+        double hoursTues = 8;
+        double hoursWed = 10.5;
+        double hoursThurs = 9.5;
+        double hoursFri = 6;
+        double hoursSat = 11.5;
+        double hoursSun = 0;
+        double hoursTotal = hoursMon + hoursTues + hoursWed + hoursThurs + hoursFri + hoursSat + hoursSun;
+
+        double paycheck = WAGE_HOURLY * hoursTotal;
+
+        System.out.printf("\n\n$%.2f.", paycheck);
+
+        /*
+         * Exercise 6.
+         *
+         * What is my take-home pay each check?
+         */
+
+        final double TAX_FEDERAL = .24;
+        final double TAX_STATE = .0637;
+        final double TAX_CONTRIBUTION = .07;
+        final double SALARY = 117000 / 24;
+
+        double finalPay = SALARY * (1 - TAX_FEDERAL) * (1 - TAX_STATE) * (1 - TAX_CONTRIBUTION);
+
+        System.out.printf("\n\n$%,.2f.", finalPay);
+
         // /*
         //  * Exercise 7.
         //  *
