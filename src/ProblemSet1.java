@@ -28,8 +28,7 @@ public class ProblemSet1 {
          double lengthMillimeters = length * conversion;
          double widthMillimeters = width * conversion;
          double squareMillimeters = lengthMillimeters * widthMillimeters;
-         double squareRounded = Math.round(squareMillimeters * 100.0) / 100.0;
-         System.out.println("\n" + squareRounded + " square millimeters.");
+         System.out.printf("\n%.2f square millimeters.", squareMillimeters);
 
         /*
          * Exercise 2.
@@ -41,8 +40,7 @@ public class ProblemSet1 {
          double lengthCentimeters = length * centimeterConversion;
          double widthCentimeters = width * centimeterConversion;
          double squareCentimeters = lengthCentimeters * centimeterConversion;
-         double centimetersRounded = Math.round(squareCentimeters * 100.0) / 100.0;
-         System.out.println("\n" + centimetersRounded + " centimeters.");
+         System.out.printf("\n\n%.2f centimeters.", squareCentimeters);
 
         /*
          * Exercise 3.
@@ -55,7 +53,7 @@ public class ProblemSet1 {
          double widthSquared = width * width;
          double diagonalSquared = lengthSquared + widthSquared;
          double diagonal = Math.round(java.lang.Math.sqrt(diagonalSquared) * 100.0) / 100.0;
-         System.out.println("\n" + diagonal + " inches.");
+         System.out.printf("\n\n%.1f inches", diagonal);
 
         /*
          * Exercise 4.
@@ -74,17 +72,15 @@ public class ProblemSet1 {
         int test2 = 87;
         int test3 = 82;
 
-        int homeworkWeight = 15;
-        int quizWeight = 35;
-        int testWeight = 50;
-        double homeworkGrade = (homework1 + homework2 + homework3) / 3;
-        double quizGrade = (quiz1 + quiz2 + quiz3) / 3;
-        double testGrade = (test1 + test2 + test3) / 3;
-        double homeworkPercentage = (homeworkGrade / 100) * homeworkWeight;
-        double quizPercentage = (quizGrade / 100) * quizWeight;
-        double testPercentage = (testGrade / 100) * testWeight;
+        double homeworkWeight = .15;
+        double quizWeight = .35;
+        double testWeight = .50;
+        double homeworkGrade = (homework1 + homework2 + homework3) * homeworkWeight / 3;
+        double quizGrade = (quiz1 + quiz2 + quiz3) * quizWeight / 3;
+        double testGrade = (test1 + test2 + test3) * testWeight / 3;
+        double total = (homeworkGrade + quizGrade + testGrade);
 
-        System.out.println("\n" + );
+        System.out.printf("\n\n%.2f%%", total);
 
 
         // /*
