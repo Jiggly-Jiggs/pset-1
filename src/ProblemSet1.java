@@ -28,7 +28,7 @@ public class ProblemSet1 {
          double lengthMillimeters = length * conversion;
          double widthMillimeters = width * conversion;
          double squareMillimeters = lengthMillimeters * widthMillimeters;
-         System.out.printf("\n%.2f square millimeters.", squareMillimeters);
+         System.out.printf("\n%,.2f square millimeters.", squareMillimeters);
 
         /*
          * Exercise 2.
@@ -39,8 +39,8 @@ public class ProblemSet1 {
          double centimeterConversion = 2.54;
          double lengthCentimeters = length * centimeterConversion;
          double widthCentimeters = width * centimeterConversion;
-         double squareCentimeters = lengthCentimeters * centimeterConversion;
-         System.out.printf("\n\n%.2f centimeters.", squareCentimeters);
+         double perimeterCentimeters = (widthCentimeters * 2) + (lengthCentimeters * 2);
+         System.out.printf("\n\n%.2f centimeters.", perimeterCentimeters);
 
         /*
          * Exercise 3.
@@ -53,7 +53,7 @@ public class ProblemSet1 {
          double widthSquared = width * width;
          double diagonalSquared = lengthSquared + widthSquared;
          double diagonal = Math.round(java.lang.Math.sqrt(diagonalSquared) * 100.0) / 100.0;
-         System.out.printf("\n\n%.1f inches", diagonal);
+         System.out.printf("\n\n%.2f inches", diagonal);
 
         /*
          * Exercise 4.
